@@ -1,3 +1,4 @@
+/* Reseteo básico */
 * {
     margin: 0;
     padding: 0;
@@ -5,45 +6,62 @@
 }
 
 body {
-    background-color: #f0f4f8;
+    /* FONDO NUEVO: Un azul oscuro profundo, elegante y moderno */
+    background-color: #1a1a2e;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #333;
+    /* Color de texto base claro para que contraste con el fondo oscuro */
+    color: #e0e0e0;
 }
 
 .container {
     padding: 20px;
-    max-width: 600px;
+    max-width: 800px;
+    /* Aumentamos un poco el contenedor para que entre bien la imagen grande */
 }
 
+/* Imagen y Animación */
 .muñequitos-manija {
     width: 100%;
-    max-width: 350px;
+    max-width: 500px;
+    /* CAMBIO AQUÍ: Antes era 350px, ahora 500px para que se vea bien grande */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    /* Un poco más de espacio abajo */
+
+    /* ANIMACIÓN "RE MANIJA": Vibra y rota un poquito */
     animation: vibrar-manija 0.4s infinite;
-    /* La magia manija */
 }
 
+/* Título Impactante */
 h1 {
     font-family: 'Bangers', cursive;
     font-size: 3.5rem;
-    color: #e63946;
+    /* Bien grande */
+
+    /* COLOR NUEVO: Un rojo coral más brillante para resaltar sobre el fondo oscuro */
+    color: #ff6b6b;
+
     text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 0px #000;
+
+    /* Sombra suave para darle profundidad sin ensuciar */
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 p {
     font-size: 1.2rem;
-    color: #555;
+    /* COLOR NUEVO: Gris claro para el subtítulo */
+    color: #bbbbbb;
     font-weight: 700;
 }
 
+/* Keyframes de la animación */
 @keyframes vibrar-manija {
     0% {
         transform: translate(0, 0) rotate(0deg);
@@ -66,8 +84,14 @@ p {
     }
 }
 
+/* Responsivo para celulares */
 @media (max-width: 480px) {
     h1 {
         font-size: 2.5rem;
+    }
+
+    .muñequitos-manija {
+        max-width: 300px;
+        /* También la agrandamos un poco en móviles (antes 250px) */
     }
 }
